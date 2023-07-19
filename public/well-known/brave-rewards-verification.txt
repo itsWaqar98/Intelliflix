@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: movielysiam.ml
+Token: bd84eb561dbb2fe4a41468e40d05e74d15d4d7cec99d9aeb29f33c5457bb1be9

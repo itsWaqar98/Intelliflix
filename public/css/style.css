@@ -1,0 +1,389 @@
+html {
+    box-sizing: border-box;
+}
+*, 
+*:after, 
+*:before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+
+body {
+    background: whitesmoke;
+    font-family: 'Homecoming', Courier;
+    font-weight: normal;
+    color: whitesmoke;
+}
+.navbar {
+    box-shadow: 0 2px 16px 2px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+.navbar > .container {
+    justify-content: center;
+}
+.navbar-brand {
+    font-family: 'Elianto', monospace;
+    font-weight: bold;
+    font-size: 2rem;
+    color: whitesmoke;
+    text-decoration: underline;
+    padding: 0 2rem 0 0;
+    margin-right: 1rem;
+    border-right: 3px white solid;
+}
+.navbar-brand:hover {
+    text-decoration: underline;
+}
+.navbar-brand img {
+    height: 2.5rem;
+    margin-right: -1rem;
+    margin-top: -1rem;
+}
+.navbar .nav-item {
+    font-size: 0.75rem;
+    font-weight: normal;
+    color: whitesmoke;
+    min-width: max-content;
+    margin-left: 1rem;
+}
+
+.jumbotron {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+.jumbotron form {
+    margin: 0 auto;
+}
+.jumbotron input,
+.jumbotron .btn {
+    outline-color: transparent;
+}
+.jumbotron h3 {
+    padding: 10px;
+    font-size: 2.5rem;   
+    letter-spacing: 0.5rem;
+}
+.jumbotron .btn {
+    font-size: 0.8rem;
+    border-image-width: 0;
+    word-spacing: 0.7rem;
+    letter-spacing: 0.2rem;
+    padding: 1.6rem 2.4rem;
+}
+.jumbotron input[type='text'] {
+    background: whitesmoke;
+    color: #1a1a1a;
+    font-size: 0.8rem;
+    word-spacing: 0.3rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    border: 2px solid #1a1a1a;
+}
+::placeholder {
+    color: #1a1a1a;
+}
+.jumbotron input[type='reset'] {
+    display: none;
+}
+
+
+.overlay {
+    display: flex;
+    visibility: hidden;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.7);
+    transition: all 0.2s ease-in-out;
+}
+
+.modal {
+    display: block;
+    opacity: 0;
+    position: relative;
+    animation: fallout 0.5s ease-in;
+}
+@keyframes fallout {
+    from { top: -1000px; }
+    to { top: 0;}
+}
+
+.modal-content {
+    color: whitesmoke;
+    transform: translateY(-8px);
+    background: #1a1a1a;
+}
+.modal-body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.modal-header {
+    justify-content: center;
+}
+.modal-title {
+    color: whitesmoke;
+    letter-spacing: 0.5rem;
+    word-spacing: 1.5rem;   
+}
+
+.card {
+    width: 275px;
+    height: 480px;
+    background: whitesmoke;
+    border: 2px solid #1e1e1e; 
+    font-family: monospace;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    position: relative;
+    padding: 5px 8px;
+    margin: 10px 10px;
+    transition: all 0.2s;
+}
+.card:hover {
+    box-shadow: 0 4px 9px rgba(0, 0, 0, 0.5);
+    transform: translateY(-3px);
+}
+
+.card .movie_image {
+    height: 320px;
+    min-width: 200px;
+    position: relative;
+    z-index: 99;
+    overflow: hidden;    
+    box-shadow: 0 3px 6px 1px rgba(0, 0, 0, 0.4);
+    margin-bottom: 0.5rem;
+}
+.card .movie_image .movie_poster {
+    width: 100%;
+    height: inherit;   
+}
+ 
+section.center {
+    display: flex;
+    align-items: center;
+    vertical-align: center;
+    padding: 5px 10px;
+    max-width: 260px;
+}
+.center .about_movie {
+    flex-basis: 100%;
+    padding: 0 5px;
+    position: relative;
+    width: 100%;
+    z-index: 99;
+    align-items: center;
+}
+
+.center h5,
+.center h3 {
+    font-family: Verdana, monospace;
+    font-weight: bold;
+    color: #1e1e1e;
+    font-size: 0.8rem;
+    margin: 15px 0;
+}
+.center .movie-title{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.watch {
+    position: relative;
+    z-index: 99;
+    background-image: linear-gradient(to right, #232526 0%, #414345 51%, #232526 100%);
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    outline: none;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all .3s;
+    font-weight: 500;
+}
+button.watch:focus {
+    outline-color: transparent;
+}
+.watch svg {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 5px;
+    position: relative;
+    top: -2px;
+    fill: #fff;
+}
+
+#movies {
+    justify-content: center;
+}
+
+.pagination {
+    margin-top: 15px;
+}
+.pagination .btn-group .btn {
+    background: #1a1a1a;
+    color: whitesmoke;
+    margin: 0 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transform: translateY(-2px);
+}
+.pagination .btn-group .btn:active {
+    box-shadow: 0 0px 2px rgba(0, 0, 0, 0.5);
+    transform: translateY(2px);
+    transition: all 0.1s ease-in-out;
+}
+.pagination .btn-group .btn:disabled {
+    box-shadow: none;
+    transform: translateY(4px); 
+}
+
+
+footer.navbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    z-index: 999;
+}
+footer.navbar > .container > .nav-item {
+    font-size: 0.65rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+}
+footer .em-svg {
+    margin: 0 5px;
+}
+
+a.cd-top {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.cd-top {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+  border-radius: 8px;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 333;
+  transition: opacity .3s 0s, visibility 0s .3s, background-color .3s 0s transform 0.2s 0.2s;
+}
+.cd-top .em-svg {
+    width: 100%;
+    height: inherit;
+    z-index: 90;
+    transition: all 0.2s;   
+}
+
+.cd-top.cd-top--show,
+.cd-top.cd-top--fade-out,
+.cd-top:hover {
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s, background-color .3s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s, background-color .3s 0s;
+}
+
+.cd-top.cd-top--show {
+  /* the button becomes visible */
+  visibility: visible;
+  opacity: 1;
+}
+
+.cd-top.cd-top--fade-out {
+  /* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+  opacity: .5;
+}
+
+.cd-top:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    transform: translateY(-2px);
+    opacity: 1;
+}
+
+
+@media only screen and (max-width: 576px) {
+    .jumbotron {
+        margin: 0;
+    }
+    .jumbotron h3 {
+        padding: 0;
+        font-size: 2rem;   
+        letter-spacing: 0.3rem;
+    }
+    .jumbotron .btn {
+        font-size: 0.7rem;
+        border-image-width: 0;
+        word-spacing: 0.35rem;
+        letter-spacing: 0.1rem;
+        max-width: 100%;
+        padding: 0.8rem 1.6rem;
+    }
+    .navbar-brand {
+        border: none;
+        margin: 0 0 5px 0;
+        padding: 0;
+    }
+    .navbar .nav-item {
+        font-size: 0.65rem;
+        margin: 0 auto;
+    }
+    footer.navbar > .container > .nav-item {
+        font-size: 0.45rem;
+    }
+    .card {
+        height: 400px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .cd-top {
+        right: 20px;
+        bottom: 50px;
+    }
+    .jumbotron .btn {
+        font-size: 0.65rem;
+        border-image-width: 0;
+        word-spacing: 0.5rem;
+        letter-spacing: 0.1rem;
+        padding: 1.6rem 0;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .cd-top {
+        height: 40px;
+        width: 40px;
+        right: 20px;
+        bottom: 50px;
+    }
+    .jumbotron .btn {
+        font-size: 0.8rem
+    }
+    .jumbotron input[type='text'] {
+        font-size: 0.6rem;
+    }
+    .jumbotron input[type='submit'] {
+        font-size: 0.65rem;
+    }
+    #toHome {
+        display: none;
+    }
+}
+
+   
+

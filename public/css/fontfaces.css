@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Elianto';
+    src: url('../fonts/Elianto.ttf')  format('truetype');
+}
+
+@font-face {
+    font-family: 'Homecoming';
+    src: url('../fonts/Homecoming.otf') format('opentype');
+}

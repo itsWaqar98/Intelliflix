@@ -1,0 +1,11 @@
+{
+    "name": "movielysiam",
+    "version": "0.0.1",
+    "description": "Lost IT!",
+    "main": "index.html",
+    "scripts": {
+        "server": "browser-sync start --server --files '/*.css, *.html, /*.js, /*.*'"
+    },
+    "author": "Unknown",
+    "license": "ISC"
+}
